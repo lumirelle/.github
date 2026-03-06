@@ -22,6 +22,19 @@ body:
       placeholder: Reproduction
     validations:
       required: true
+  - type: dropdown
+    id: package-manager
+    attributes:
+      label: Used Package Manager
+      description: If this is a Node.js project, please select the package manager you are using.
+      options:
+        - n/a
+        - npm
+        - yarn
+        - pnpm
+        - bun
+    validations:
+      required: true
   - type: textarea
     id: system-info
     attributes:
@@ -30,20 +43,7 @@ body:
       render: Shell
       placeholder: System, Binaries, Browsers
     validations:
-      required: true
-  - type: dropdown
-    id: package-manager
-    attributes:
-      label: Used Package Manager
-      description: Select the used package manager
-      options:
-        - npm
-        - yarn
-        - pnpm
-        - bun
-        - n/a
-    validations:
-      required: true
+      required: false
   - type: checkboxes
     id: checkboxes
     attributes:
